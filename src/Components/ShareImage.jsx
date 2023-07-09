@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 const ShareImage = ({ imageUrl }) => {
-    const shareUrl = "tutorialspoint.com"; // Get the current page URL
+    const shareUrl = window.location.href; // Get the current page URL
   
     return (
       <div>
         {/* Meta tags for preview */}
-        <img src={imageUrl} alt="Img Not Found" />
+        
         <Helmet>
           <meta property="og:title" content="My Image Title" />
           <meta property="og:description" content="Check out this awesome image!" />
@@ -24,7 +24,7 @@ const ShareImage = ({ imageUrl }) => {
         <TwitterShareButton url={shareUrl} title="My Image Title">
           Share on Twitter
         </TwitterShareButton>
-        <WhatsappShareButton url={shareUrl} title="My image title">
+        <WhatsappShareButton url={shareUrl} title="My Image Title">
             Share on Whatsapp
         </WhatsappShareButton>
       </div>
