@@ -7,7 +7,7 @@ const ShareImage = ({ imageUrl }) => {
     return (
       <div>
         {/* Meta tags for preview */}
-        
+        <img src={imageUrl} alt="Unable to load" />
         <Helmet>
           <meta property="og:title" content="My Image Title" />
           <meta property="og:description" content="Check out this awesome image!" />
@@ -17,14 +17,14 @@ const ShareImage = ({ imageUrl }) => {
         </Helmet>
   
         {/* Share buttons */}
-        <FacebookShareButton url={shareUrl} quote="Check out this awesome image!">
+        <FacebookShareButton url={imageUrl} quote="Check out this awesome image!">
           Share on Facebook
         </FacebookShareButton>
   
-        <TwitterShareButton url={shareUrl} title="My Image Title">
+        <TwitterShareButton url={imageUrl} title="My Image Title">
           Share on Twitter
         </TwitterShareButton>
-        <WhatsappShareButton url={shareUrl} title="My Image Title">
+        <WhatsappShareButton url={imageUrl} title="My Image Title">
             Share on Whatsapp
         </WhatsappShareButton>
       </div>
